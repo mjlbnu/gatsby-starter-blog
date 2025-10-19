@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: space-around;
   padding: 8px 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: 0.3s;
@@ -11,6 +12,21 @@
   right: 0;
   z-index: 1000;
   background: var(--color-background, #fff);
+  gap: 0.5rem;
+
+  a {
+    white-space: nowrap;
+    padding: 0.75rem 1rem;
+    color: yellowgreen;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 500;
+
+    &.active {
+      background: gray;
+      color: whitesmoke;
+    }
+  }
 }
 
 .top-menu-fixed img {
@@ -42,4 +58,8 @@
 .toggle-img.from-top {
   opacity: 0;
   transform: translateY(-50px); /* Move para baixo ao entrar */
+}
+
+.icon-home {
+  display: block;
 }

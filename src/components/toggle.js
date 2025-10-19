@@ -1,12 +1,25 @@
 import React from "react"
+import { Link } from "gatsby"
 import "./toggle.css"
 import Sun from "../images/sun.svg"
 import Moon from "../images/moon.svg"
+import IconHome from "../images/icon-home-2.svg"
 
 export default function DarkMode() {
   const [isDark, setIsDark] = React.useState(getDefaultTheme())
   const [animating, setAnimating] = React.useState(false)
   const [prevTheme, setPrevTheme] = React.useState(isDark)
+
+  const links = [
+    { url: '/', label: 'Início', image: IconHome },
+    { url: '/notas', label: 'Notas', image: IconHome },
+    { url: '/filosofia', label: 'Filosofia', image: IconHome },
+    { url: '/projetos', label: 'Projetos', image: IconHome },
+    { url: '/me', label: 'Sobre mim', image: IconHome },
+  ]
+
+  function handleCloseMobileNav() {
+  }
 
   function getDefaultTheme() {
     const savedTheme = window.localStorage.getItem('theme');
@@ -33,8 +46,23 @@ export default function DarkMode() {
 
   return (
     <div className="top-menu-fixed">
-      <span style={{position: "relative", display: "inline-block", width: 32, height: 32}}>
-        {/* Imagem atual */}
+
+      <nav className={`navbar-menu nav-items`}>
+        {links.map((link) => (
+          <Link
+            key={link.url}
+            to={link.url}
+            activeClassName="active"
+            onClick={handleCloseMobileNav}
+          >
+            <img src={link.image} alt={link.label} />
+            {link.label}
+          </Link>
+        ))}
+      </nav>
+
+      <span style={{ position: "relative", display: "inline-block", width: 32, height: 32 }}>
+        { }
         <img
           src={isDark === "dark" ? Sun : Moon}
           alt={isDark === "dark" ? "sun img" : "moon img"}
