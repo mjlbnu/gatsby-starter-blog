@@ -4,6 +4,7 @@ import "./toggle.css"
 import Sun from "../images/sun.svg"
 import Moon from "../images/moon.svg"
 import IconHome from "../images/icon-home-2.svg"
+import Me from "../images/meanime.png"
 
 export default function DarkMode() {
   const [isDark, setIsDark] = React.useState(getDefaultTheme())
@@ -11,11 +12,9 @@ export default function DarkMode() {
   const [prevTheme, setPrevTheme] = React.useState(isDark)
 
   const links = [
-    { url: '/', label: 'Início', image: IconHome },
-    { url: '/notas', label: 'Notas', image: IconHome },
-    { url: '/filosofia', label: 'Filosofia', image: IconHome },
-    { url: '/projetos', label: 'Projetos', image: IconHome },
-    { url: '/me', label: 'Sobre mim', image: IconHome },
+    { url: '/filosofia', label: 'Filosofia', image: '' },
+    { url: '/projetos', label: 'Projetos', image: '' },
+    { url: '/notas', label: 'Notas', image: '' },
   ]
 
   function handleCloseMobileNav() {
@@ -28,9 +27,11 @@ export default function DarkMode() {
 
   React.useEffect(() => {
     if (isDark === 'dark') {
+      document.body.classList.remove('light');
       document.body.classList.add('dark');
     } else {
       document.body.classList.remove('dark');
+      document.body.classList.add('light');
     }
     window.localStorage.setItem('theme', isDark);
   }, [isDark])
@@ -48,6 +49,11 @@ export default function DarkMode() {
     <div className="top-menu-fixed">
 
       <nav className={`navbar-menu nav-items`}>
+
+        <Link to="/" className="nav-logo-link" onClick={handleCloseMobileNav}>
+          <img src={IconHome} alt="logo" className="nav-logo-img" />
+        </Link>
+
         {links.map((link) => (
           <Link
             key={link.url}
@@ -55,7 +61,9 @@ export default function DarkMode() {
             activeClassName="active"
             onClick={handleCloseMobileNav}
           >
-            <img src={link.image} alt={link.label} />
+            {link.image ? (
+              <img src={link.image} alt={link.label} className="nav-link-icon" />
+            ) : null}
             {link.label}
           </Link>
         ))}

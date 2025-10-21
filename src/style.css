@@ -78,6 +78,7 @@ body {
 }
 
 body.dark {
+  --color-top-menu: #141d26;
   --color-background: #141d26;
   --color-primary: #60519b;
   --color-text: #aac0c4;
@@ -89,6 +90,7 @@ body.dark {
 }
 
 body.light {
+  --color-top-menu: #FFFFFF;
   --color-primary: #CD104D;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
@@ -101,6 +103,7 @@ body.light {
 
 footer {
   padding: var(--spacing-6) var(--spacing-0);
+  border-top: 1px solid var(--color-accent);
 }
 
 hr {
