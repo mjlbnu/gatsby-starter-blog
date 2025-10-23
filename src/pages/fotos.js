@@ -5,10 +5,10 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const Notas = ({ data, location }) => {
-    const siteTitle = `Notas`
+const Fotos = ({ data, location }) => {
+    const siteTitle = `Fotos`
     const posts = data.allMarkdownRemark.nodes
-    const title = "Notas"
+    const title = "Fotos"
 
     if (posts.length === 0) {
         return (
@@ -35,7 +35,7 @@ const Notas = ({ data, location }) => {
     )
 }
 
-export default Notas
+export default Fotos
 
 /**
  * Head export to define metadata for the page

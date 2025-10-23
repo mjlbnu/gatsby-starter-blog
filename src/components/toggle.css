@@ -1,21 +1,19 @@
 .top-menu-fixed {
   display: flex;
   align-items: center;
-  justify-content: center;
   justify-content: space-around;
-  padding: 8px 16px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
   background-color: var(--color-top-menu);
-  gap: 0.5rem;
   border-bottom: 1px solid var(--color-accent);
 
   a {
     white-space: nowrap;
-    padding: 0.75rem 1rem;
+    padding-top: 0.5rem;
+    padding-right: 1.5rem;
     color: var(--color-primary);
     border-radius: var(--border-radius);
     text-decoration: none;
@@ -27,10 +25,16 @@
   }
 }
 
+.navbar-menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .top-menu-fixed img {
   cursor: pointer;
-  width: 32px;
-  height: 32px;
+  width: 50px;
+  /*height: 32px;*/
   transition: filter 0.3s, box-shadow 0.3s, transform 1s cubic-bezier(0.4,0.2,0.2,1);
 }
 
@@ -39,6 +43,7 @@
   opacity: 1;
   transition: opacity 1s, transform 1s;
   will-change: opacity, transform;
+  width: 32px !important;
 }
 
 .toggle-img.exit {

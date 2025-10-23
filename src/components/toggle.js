@@ -3,8 +3,7 @@ import { Link } from "gatsby"
 import "./toggle.css"
 import Sun from "../images/sun.svg"
 import Moon from "../images/moon.svg"
-import IconHome from "../images/icon-home-2.svg"
-import Me from "../images/meanime.png"
+import Trident from "../images/tridente_2.png"
 
 export default function DarkMode() {
   const [isDark, setIsDark] = React.useState(getDefaultTheme())
@@ -14,7 +13,7 @@ export default function DarkMode() {
   const links = [
     { url: '/filosofia', label: 'Filosofia', image: '' },
     { url: '/projetos', label: 'Projetos', image: '' },
-    { url: '/notas', label: 'Notas', image: '' },
+    { url: '/fotos', label: 'Fotos', image: '' },
   ]
 
   function handleCloseMobileNav() {
@@ -48,10 +47,10 @@ export default function DarkMode() {
   return (
     <div className="top-menu-fixed">
 
-      <nav className={`navbar-menu nav-items`}>
+      <nav className={`navbar-menu-items`}>
 
         <Link to="/" className="nav-logo-link" onClick={handleCloseMobileNav}>
-          <img src={IconHome} alt="logo" className="nav-logo-img" />
+          <img src={Trident} alt="logo" className="nav-logo-img" />
         </Link>
 
         {links.map((link) => (
