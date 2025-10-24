@@ -1,19 +1,17 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const Fotos = ({ data, location }) => {
-    const siteTitle = `Fotos`
+const Fotografia = ({ data, location }) => {
+    const siteTitle = `Fotografia`
     const posts = data.allMarkdownRemark.nodes
-    const title = "Fotos"
+    const title = "Fotografia"
 
     if (posts.length === 0) {
         return (
             <Layout location={location} title={siteTitle}>
-                <Bio />
                 <p>
                     No blog posts found. Add markdown posts to "content/blog" (or the
                     directory you specified for the "gatsby-source-filesystem" plugin in
@@ -35,7 +33,7 @@ const Fotos = ({ data, location }) => {
     )
 }
 
-export default Fotos
+export default Fotografia
 
 /**
  * Head export to define metadata for the page

@@ -12,8 +12,7 @@ export default function DarkMode() {
 
   const links = [
     { url: '/filosofia', label: 'Filosofia', image: '' },
-    { url: '/projetos', label: 'Projetos', image: '' },
-    { url: '/fotos', label: 'Fotos', image: '' },
+    { url: '/fotografia', label: 'Fotografia', image: '' },
   ]
 
   function handleCloseMobileNav() {
