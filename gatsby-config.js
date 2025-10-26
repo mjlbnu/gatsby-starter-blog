@@ -9,13 +9,13 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Bem-vindo ao meu jardim digital`,
+    title: ``,
     author: {
       name: `Marcio José Lisboa`,
-      summary: `summary text here...`,
+      summary: `Jardim digital de Marcio José Lisboa.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Jardim digital de Marcio José Lisboa`,
+    siteUrl: `https://www.programadorbr.com.br/`,
     social: {
       twitter: `mjlbnu`,
       linkedin: `mjlbnu`,

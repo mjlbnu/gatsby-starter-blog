@@ -3,12 +3,11 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Toggle from "../components/toggle"
-import Intro from "../components/intro"
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || ``
+const Sumario = ({ data, location }) => {
+  const siteTitle = `Sumário filosófico`
   const posts = data.allMarkdownRemark.nodes
+  const title = "Sumário filosófico"
 
   if (posts.length === 0) {
     return (
@@ -16,18 +15,15 @@ const BlogIndex = ({ data, location }) => {
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
+          gatsby-config.js)
         </p>
       </Layout>
     )
   }
 
   return (
-    <>
-      <Toggle />
-      <Layout location={location} title={siteTitle}>
-        <Intro />
-        <h2>Reflexões recentes</h2>
+    <Layout location={location} title={siteTitle}>
+      <h1 className="main-heading">{title}</h1>
         <ol style={{ listStyle: `none` }}>
           {posts.map(post => {
             const title = post.frontmatter.title || post.fields.slug
@@ -59,12 +55,11 @@ const BlogIndex = ({ data, location }) => {
             )
           })}
         </ol>
-      </Layout>
-    </>
+    </Layout>
   )
 }
 
-export default BlogIndex
+export default Sumario
 
 /**
  * Head export to define metadata for the page
