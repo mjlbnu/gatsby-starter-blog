@@ -1,0 +1,6 @@
+[build]
+  publish = "public"
+  command = "yarn run build"
+[build.environment]
+  YARN_VERSION = "1.22.22"
+  NODE_VERSION = "22.18.0"
