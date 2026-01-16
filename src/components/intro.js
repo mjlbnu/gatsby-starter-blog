@@ -34,10 +34,10 @@ const Intro = () => {
     <div className="intro">
       <h2>Olá!👋🏻</h2>
       <p>
-        Vivemos tempos em que é fácil se perder na pressa, nas opiniões prontas e nas respostas automáticas. Mas a filosofia, seja a de Sócrates, Sêneca, Allan Kardec, ou qualquer outro autor, sempre nos convida a algo mais simples e essencial: <strong>pensar por conta própria</strong>.
+        Vivemos tempos em que é fácil se perder na pressa, nas opiniões prontas e nas respostas automáticas. Mas a filosofia sempre nos convida a algo mais simples e essencial: <strong>pensar por conta própria</strong>.
       </p>
       <p>
-        Este espaço nasce do desejo de <strong>retomar o hábito da reflexão</strong>. Não é um refúgio de certezas, mas um campo de perguntas. Aqui, as ideias se encontram com a experiência cotidiana, a espiritualidade dialoga com a razão e o pensamento filosófico se torna ferramenta para compreender e <strong>transformar a própria existência</strong>.
+        Este espaço não é um refúgio de certezas, mas um campo de pensamentos. Aqui, a espiritualidade dialoga com a razão e o pensamento filosófico se torna ferramenta para compreender e <strong>transformar a própria existência</strong>.
       </p>
       <p>
         Os textos que você encontrará aqui são ensaios breves, escritos para provocar, inspirar e às vezes incomodar. Afinal, refletir é também <strong>sair do conforto do pensamento comum</strong>.

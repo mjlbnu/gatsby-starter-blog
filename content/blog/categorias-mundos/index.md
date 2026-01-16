@@ -1,7 +1,7 @@
 ---
 title: Diferentes categorias de mundos habitados
 date: "2025-10-24T22:10:32.169Z"
-description: Sobre as diferentes categorias de mundos habitados
+description: Uma reflexão sobre as diferentes categorias de mundos habitados.
 ---
 
 Uma das passagens mais citadas no espiritismo aparece no capítulo III de *O Evangelho Segundo o Espiritismo*, com o título:
