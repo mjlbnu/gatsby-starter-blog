@@ -11,7 +11,7 @@ export default function DarkMode() {
   const [prevTheme, setPrevTheme] = React.useState(isDark)
 
   const links = [
-    { url: '/sumario', label: 'Sumário filosófico', image: '' },
+    { url: '/sumario', label: 'Sumário', image: '' },
 ]
 
   function handleCloseMobileNav() {

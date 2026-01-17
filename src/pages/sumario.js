@@ -5,9 +5,9 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const Sumario = ({ data, location }) => {
-  const siteTitle = `Sumário filosófico`
+  const siteTitle = `Sumário`
   const posts = data.allMarkdownRemark.nodes
-  const title = "Sumário filosófico"
+  const title = "Sumário"
 
   if (posts.length === 0) {
     return (
@@ -41,7 +41,7 @@ const Sumario = ({ data, location }) => {
                         <span itemProp="headline">{title}</span>
                       </Link>
                     </h2>
-                    <small>{post.frontmatter.date}</small>
+                    {/*<small>{post.frontmatter.date}</small>*/}
                   </header>
                   <section>
                     <p
