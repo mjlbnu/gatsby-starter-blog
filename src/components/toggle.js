@@ -18,11 +18,14 @@ export default function DarkMode() {
   }
 
   function getDefaultTheme() {
+    if (typeof window === 'undefined') return 'dark';
     const savedTheme = window.localStorage.getItem('theme');
     return savedTheme ? savedTheme : 'dark';
   }
 
   React.useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     if (isDark === 'dark') {
       document.body.classList.remove('light');
       document.body.classList.add('dark');
