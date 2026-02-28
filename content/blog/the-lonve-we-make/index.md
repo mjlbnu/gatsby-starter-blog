@@ -34,4 +34,4 @@ Confira parte da letra de *The Love We Make* na forma de um poema:
 >Abençoados são os que fazem essa prece, pois um novo mundo os espera.*
 
 >A única luz real é a que acendemos uns nos outros.  
->O único amor que existe é o amor que criamos.*
+>O único amor que existe é o amor que criamos.
