@@ -1,6 +1,6 @@
 ---
 title: Mediunidade, Espiritualidade e Disciplina
-date: "2026-24-06T22:03:32.169Z"
+date: "2026-06-24T22:03:32.169Z"
 description: Mediunidade não é prova de evolução espiritual, o que realmente importa é o uso ético dessa faculdade, sustentado por estudo, disciplina e serviço ao próximo.
 ---
 

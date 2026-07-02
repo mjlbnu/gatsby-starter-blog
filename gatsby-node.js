@@ -25,6 +25,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           fields {
             slug
           }
+          frontmatter {
+            hidden
+          }
         }
       }
     }
@@ -39,15 +42,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allMarkdownRemark.nodes
+  const visiblePosts = posts.filter(post => !post.frontmatter?.hidden)
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
 
   if (posts.length > 0) {
-    posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+    posts.forEach(post => {
+      const visibleIndex = visiblePosts.findIndex(visiblePost => visiblePost.id === post.id)
+      const previousPostId = visibleIndex <= 0 ? null : visiblePosts[visibleIndex - 1].id
+      const nextPostId = visibleIndex === -1 || visibleIndex >= visiblePosts.length - 1 ? null : visiblePosts[visibleIndex + 1].id
 
       createPage({
         path: post.fields.slug,
@@ -116,6 +121,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      hidden: Boolean
     }
 
     type Fields {

@@ -19,8 +19,6 @@ Ao afirmar que **“o único amor que existe é o amor que criamos”**, ele des
 
 Confira parte da letra de *The Love We Make* na forma de um poema:
 
----
-
 >*O amanhã pesa para quem ainda não percebeu que o tempo baterá à sua porta.  
 >Há mesas fartas e mãos vazias, há cães açoitados, cansados de pedir migalhas.*
 

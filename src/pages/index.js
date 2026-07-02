@@ -80,7 +80,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { hidden: { ne: true } } }
+      sort: { frontmatter: { date: DESC } }
+    ) {
       nodes {
         excerpt
         fields {
