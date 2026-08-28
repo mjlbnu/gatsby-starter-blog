@@ -20,7 +20,7 @@ function timeAgoFromISO(iso) {
 
 async function getResume(url) {
     try {
-        const response = await fetch(url); // removed duplicate await
+        const response = await fetch(url);
 
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}`);
@@ -59,11 +59,7 @@ exports.handler = async function() {
 
             const timeEl = $(this).find('.post-card-meta').find('.meta-content > time');
             const date = timeEl.attr('datetime') || null;
-            // prefer visible text if present, otherwise compute from datetime
-            let timePassed = timeEl.text().trim();
-            if (!timePassed && date) {
-              timePassed = timeAgoFromISO(date);
-            }
+            const timePassed = timeAgoFromISO(date);
 
             const resume = await getResume(url);
 
