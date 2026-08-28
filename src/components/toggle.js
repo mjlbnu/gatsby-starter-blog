@@ -11,7 +11,8 @@ export default function DarkMode() {
   const [prevTheme, setPrevTheme] = React.useState(isDark)
 
   const links = [
-    { url: '/sumario', label: 'Sumário', image: '' },
+    { url: '/reflexoes', label: 'Reflexões', image: '' },
+    { url: '/freecodecamp', label: 'freeCodeCamp', image: '' },
 ]
 
   function handleCloseMobileNav() {

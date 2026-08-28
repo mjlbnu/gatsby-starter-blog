@@ -4,10 +4,10 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const Sumario = ({ data, location }) => {
-  const siteTitle = `Sumário`
+const Reflexoes = ({ data, location }) => {
+  const siteTitle = `Reflexões`
   const posts = data.allMarkdownRemark.nodes
-  const title = "Sumário"
+  const title = "Reflexões"
 
   if (posts.length === 0) {
     return (
@@ -59,14 +59,14 @@ const Sumario = ({ data, location }) => {
   )
 }
 
-export default Sumario
+export default Reflexoes
 
 /**
  * Head export to define metadata for the page
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Sumário" />
+export const Head = () => <Seo title="Artigos" />
 
 export const pageQuery = graphql`
   {

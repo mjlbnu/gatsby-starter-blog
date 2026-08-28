@@ -6,6 +6,7 @@
 
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const freeCodeCampFunction = require(`./netlify/functions/freecodecamp`)
 
 // Define the template for blog post
 const blogPost = path.resolve(`./src/templates/blog-post.js`)
@@ -128,4 +129,27 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
   `)
+}
+
+/**
+ * Expose Netlify functions while running Gatsby's development server.
+ */
+exports.onCreateDevServer = ({ app }) => {
+  app.get(`/.netlify/functions/freecodecamp`, async (request, response) => {
+    try {
+      const result = await freeCodeCampFunction.handler(request, {
+        httpMethod: request.method,
+        path: request.path,
+        headers: request.headers,
+        queryStringParameters: request.query,
+      })
+
+      response
+        .status(result.statusCode || 200)
+        .type(`application/json`)
+        .send(result.body || ``)
+    } catch (error) {
+      response.status(500).json({ error: `Failed to fetch FreeCodeCamp data` })
+    }
+  })
 }

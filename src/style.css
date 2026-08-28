@@ -162,6 +162,14 @@ h6 {
   font-size: var(--fontSize-1);
 }
 
+.freecodecamp-card p {
+  margin-bottom: 0;
+}
+
+.freecodecamp-card h2 {
+  margin-top: 0;
+}
+
 h1 > a {
   color: inherit;
   text-decoration: none;
