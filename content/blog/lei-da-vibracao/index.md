@@ -88,13 +88,7 @@ Se os padrões foram aprendidos, eles também podem ser transformados.
 
 Qual é o estado emocional que mais frequentemente acompanha seus dias?
 
-Medo?
-
-Raiva?
-
-Tristeza?
-
-Ansiedade?
+![Estados emocionais](./estados_emocionais.png)
 
 Ou talvez uma sensação constante de insuficiência?
 
@@ -108,13 +102,7 @@ De onde veio esse padrão?
 
 Ele nasceu de uma experiência pessoal? Foi aprendido na família? Foi absorvido do ambiente?
 
-Nem toda herança é genética. Muitas das nossas crenças são emocionais.
-
-**Aprendemos observando**.
-
-**Aprendemos convivendo**.
-
-**Aprendemos sobrevivendo**.
+![Aprendizados](./aprendizados.png)
 
 ## O corpo como porta de entrada
 
@@ -136,11 +124,7 @@ A mudança profunda raramente acontece por convencimento intelectual.
 
 Diversas tradições espirituais ensinaram, cada uma à sua maneira, que existe uma conexão profunda entre o indivíduo e o todo.
 
-Os **povos indígenas** frequentemente falam sobre a **interdependência de todas as formas de vida**.
-
-A **filosofia védica** descreve o universo como uma **pulsação contínua de expansão e contração**.
-
-O **estoicismo** ensinava que a verdadeira liberdade surge quando **deixamos de lutar contra a realidade e aprendemos a governar nossa própria mente**.
+![Sabedorias](./sabedorias.png)
 
 Apesar das diferenças culturais e históricas, todas essas tradições apontam para uma mesma direção:
 
@@ -160,10 +144,6 @@ A verdadeira transformação começa quando paramos de perguntar apenas _"o que 
 
 Mudar a frequência não significa pensar positivo o tempo todo.
 
-> Significa reconhecer com honestidade os estados internos que governam nossa vida.
-
-> Significa trazer luz ao que estava oculto.
-
-> Significa atualizar a identidade para que o passado deixe de escrever o futuro.
+![Significados](./significados.png)
 
 E talvez seja justamente aí que começa toda liberdade: **no instante em que percebemos que não somos obrigados a continuar sendo a mesma pessoa que fomos ontem**.
