@@ -66,3 +66,20 @@
 .icon-home {
   display: block;
 }
+
+.nav-link-icon {
+  display: none;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+@media (max-width: 480px) {
+  .nav-link-has-icon .nav-link-label {
+    display: none;
+  }
+
+  .nav-link-has-icon .nav-link-icon {
+    display: inline-block;
+  }
+}

@@ -4,6 +4,8 @@ import "./toggle.css"
 import Sun from "../images/sun.svg"
 import Moon from "../images/moon.svg"
 import Trident from "../images/tridente_2.png"
+import FccPrimary from "../images/fcc_primary_small.svg"
+import FccSecondary from "../images/fcc_secondary_small.svg"
 
 export default function DarkMode() {
   const [isDark, setIsDark] = React.useState(getDefaultTheme())
@@ -12,7 +14,7 @@ export default function DarkMode() {
 
   const links = [
     { url: '/reflexoes', label: 'Reflexões', image: '' },
-    { url: '/freecodecamp', label: 'freeCodeCamp', image: '' },
+    { url: '/freecodecamp', label: 'freeCodeCamp', image: isDark === 'dark' ? FccPrimary : FccSecondary },
 ]
 
   function handleCloseMobileNav() {
@@ -61,11 +63,12 @@ export default function DarkMode() {
             to={link.url}
             activeClassName="active"
             onClick={handleCloseMobileNav}
+            className={link.image ? "nav-link-has-icon" : ""}
           >
             {link.image ? (
               <img src={link.image} alt={link.label} className="nav-link-icon" />
             ) : null}
-            {link.label}
+            <span className="nav-link-label">{link.label}</span>
           </Link>
         ))}
       </nav>
